@@ -12,89 +12,166 @@
   h2 { font-size: 1.15rem; margin-top: 2.25rem; }
   code { font-size: .9em; }
   li { margin: .35rem 0; }
+  a { color: inherit; }
   @media (prefers-color-scheme: dark) { body { background: #111; color: #e8e8e8; } }
 </style>
 </head>
 <body>
 <h1>Tare — Privacy Policy</h1>
-<p><strong>Last updated: 21 September 2026</strong></p>
-<p>Tare is a personal finance app for iPhone, iPad and Mac. This policy says what</p>
-<p>happens to your information, in plain words. Where the answer is &quot;nothing leaves</p>
-<p>your device&quot;, it says so, because for most of what Tare does that is the truth.</p>
+<p><strong>Last updated: 25 September 2026</strong></p>
+<p>Tare is a personal finance app for iPhone, iPad and Mac. This policy says what
+happens to your information, in plain words. Where the answer is "nothing leaves
+your device", it says so, because for most of what Tare does that is the truth.</p>
 <h2>The short version</h2>
 <ul>
-<li><strong>If you do not connect a bank, Tare sends nothing to us. Ever.</strong> There is no</li>
-<p>  account to create, nothing to log in to, and no server involved.</p>
-<li><strong>We do not track you, and we do not collect analytics.</strong> No advertising</li>
-<p>  identifiers, no third-party analytics SDKs, no profiling.</p>
+<li><strong>If you use only Tare's free features, Tare sends nothing to us. Ever.</strong> There
+  is no account to create, nothing to log in to, and no server of ours involved.
+  No paid feature is available yet, so today that is true for everyone.</li>
+<li><strong>We do not track you, and Tare collects no analytics.</strong> No advertising
+  identifiers, no third-party analytics SDKs, no profiling. What Apple can pass
+  to us, if you allow it, is under <em>What Apple passes to us</em>.</li>
 <li><strong>We never sell your information</strong>, and we never share it for advertising.</li>
 <li><strong>We never see your bank username or password.</strong> Nobody at Tare can, by design.</li>
 </ul>
 <h2>What Tare does on your device</h2>
-<p>Reading receipts, recognising text, categorising a purchase, totalling a month,</p>
-<p>detecting a recurring charge and writing advice all run **on your iPhone, iPad or</p>
-<p>Mac**. None of it involves a network request.</p>
+<p>Reading receipts, recognising text, categorising a purchase, totalling a month,
+detecting a recurring charge and writing advice all run <strong>on your iPhone, iPad or
+Mac</strong>. None of it involves a network request.</p>
 <ul>
-<li><strong>Receipt photographs</strong> are read on the device. The photograph you keep with a</li>
-<p>  receipt stays on that device and is not uploaded or synced.</p>
-<li><strong>Finding receipts in your photo library</strong> is optional and off by default. When</li>
-<p>  you turn it on, Tare looks at photos on that device only. It records which</p>
-<p>  photos it has already examined — identifiers and a status, never anything it</p>
-<p>  read from a photo.</p>
-<li><strong>Card numbers are redacted before anything is stored.</strong> Tare keeps at most the</li>
-<p>  last four digits, and only where the payment method can carry them.</p>
+<li><strong>Receipt photographs</strong> are read on the device. The photograph you keep with a
+  receipt stays on the device you saved it on: Tare does not upload it, and does not
+  sync it to your other devices. Like everything an app keeps on your device, it
+  is part of that device's backup if you make one (see <em>Your device's backup</em>).</li>
+<li><strong>Finding receipts in your photo library</strong> is optional and off by default. When
+  you turn it on, Tare looks at photos on that device only. It keeps a list of the
+  photos that looked like receipts, with what became of each and when, and a
+  note of how far through your library it has got. It never keeps anything it
+  read from a photo. That list stays on the device: it does not sync, and it is
+  left out of the device's backup.</li>
+<li><strong>Card numbers are cut from the text Tare stores.</strong> In the text Tare reads from
+  a receipt, and in the comment column of a file you import, any long run of
+  digits that could be a card number is cut to its last four before it is saved.
+  That text keeps those four digits whatever the payment method; a transaction's
+  own card field keeps them only when it was paid by card or wallet, or the
+  method is unknown. The other columns of an imported file, such as the place,
+  the sheet's name and the transfer column, are kept as the file has them. This
+  is done to text, not to the photograph: the picture Tare keeps shows the
+  receipt as it was photographed, so if the paper shows a full card number, so
+  does the picture. Tare does not scan text you type yourself, such as a note
+  you write.</li>
 </ul>
 <h2>Sync through your own iCloud</h2>
-<p>If you are signed in to iCloud, your ledger syncs between your own devices using</p>
-<p>Apple&#x27;s CloudKit, in <strong>your</strong> private iCloud database. We have no access to it —</p>
-<p>it is your Apple account, not ours, and Apple bills the storage to you.</p>
-<p>Your personal details in that database are <strong>end-to-end encrypted</strong>, so they are</p>
-<p>unreadable even to Apple: merchant names, notes, tags, the last four digits of a</p>
-<p>card, transfer counterparties, receipt text and addresses, account names, account</p>
-<p>numbers&#x27; last digits, institution names, category names and rule values. Amounts,</p>
-<p>dates, identifiers and flags are not encrypted, because CloudKit must be able to</p>
-<p>index them for sync to work at all.</p>
-<h2>If you connect a bank (a paid feature)</h2>
-<p>Connecting a bank is optional, is part of a paid subscription, and is the only</p>
-<p>part of Tare that involves our servers.</p>
+<p>If you are signed in to iCloud, your ledger syncs between your own devices using
+Apple's CloudKit, in <strong>your</strong> private iCloud database. We have no access to it —
+it is your Apple account, not ours, and Apple bills the storage to you.</p>
+<p>Your personal details in that database are <strong>end-to-end encrypted</strong>, so they are
+unreadable even to Apple: merchant names, notes, tags, the last four digits of a
+card, transfer counterparties, receipt text and addresses, account names, account
+numbers' last digits, institution names, category names and rule values. The rest is encrypted by
+Apple but not end-to-end: amounts, currencies, dates, how you paid (card, cash
+and so on), the type of each account, category icons, whether a transaction was
+typed, scanned or imported, how each rule matches, and the app's own identifiers
+and flags. That was our choice, not a limit of CloudKit: without the names beside
+them these say little, and if your iCloud Keychain is ever reset you lose the
+synced copy of every end-to-end encrypted detail, which should not include your
+figures.</p>
+<h2>Your device's backup</h2>
+<p>Tare's data on your iPhone, iPad or Mac — your ledger and any receipt
+photographs — is part of that device's backup, exactly as every app's data is, if
+you back it up: to iCloud or a computer for an iPhone or iPad, with Time Machine
+for a Mac. Apple encrypts iCloud Backup, but it is
+<strong>end-to-end encrypted only if you turn on Advanced Data Protection</strong> for your
+Apple account; otherwise Apple holds the keys to it. The end-to-end encryption
+described in the section above applies to Tare's sync database, not to your
+device's backup. Tare cannot see either.</p>
+<h2>What Apple passes to us</h2>
+<p>If you have chosen, in your device's settings, to share analytics with app
+developers, Apple passes us crash reports and aggregated usage figures. If you
+test Tare through TestFlight and send feedback, we receive what you send: your
+comment, any screenshots, your device model and system version, and any crash
+report you choose to send. We use it to fix the app, and copies we download to
+do that are deleted afterwards.</p>
+<h2>If you connect a bank (a paid feature, not available yet)</h2>
+<p><strong>Connecting a bank is not available yet</strong>, and nothing in this section happens
+in the app today. It says how it will work, so you can judge it before it
+arrives, and this policy will be updated before it does. It will be optional and
+part of a paid subscription. Paid features are the only parts of Tare that
+involve our servers.</p>
 <ul>
-<li><strong>Your bank credentials never reach us.</strong> The connection is made through</li>
-<p>  <strong>Plaid</strong>, whose own screen collects them; they travel from your device to</p>
-<p>  Plaid and never through Tare. We receive a token that lets us read</p>
-<p>  transactions, and nothing that could let anyone sign in to your bank.</p>
-<li><strong>We request read access to transactions only.</strong> Not the ability to move money.</li>
-<li><strong>What we store</strong>, encrypted, under a key unique to you: the access token, your</li>
-<p>  account names and types, and the transactions we read, so they can be matched</p>
-<p>  against receipts you have already entered and not counted twice.</p>
-<li><strong>You can disconnect at any time</strong>, in the app. Disconnecting revokes the token</li>
-<p>  with Plaid and deletes the connection.</p>
-<li>Plaid has its own privacy policy, at plaid.com/legal.</li>
+<li><strong>You sign in with Apple first.</strong> Connecting a bank needs an account on our
+  servers so the connection belongs to you. Tare uses Sign in with Apple and does not ask
+  Apple for your name or your email address. We store the identifier Apple gives
+  us for Tare. If Apple includes an email address anyway, we keep it too,
+  encrypted under a key unique to you. For each device you sign in on, we also
+  keep a random identifier Tare makes for that device, the word "iPhone" or
+  "Mac" (never your device's own name), and when that sign-in started and when
+  it ends. Deleting your account deletes all of this, and disconnects any bank
+  first. It does not yet remove Tare from the apps using Sign in with Apple in
+  your Apple Account settings; you can remove it there yourself.</li>
+<li><strong>Your bank credentials never reach us.</strong> The connection is made through
+  <strong>Plaid</strong>, whose own screen collects them; they travel from your device to
+  Plaid and never through Tare. We receive a token that lets us read
+  transactions, and nothing that could let anyone sign in to your bank.</li>
+<li><strong>We request read access only</strong>: your accounts, their balances and their
+  transactions. Not the ability to move money.</li>
+<li><strong>What we store</strong>: the access token and your bank's name, encrypted under a
+  key unique to you; each account's name, type, last four digits and balance;
+  and the transactions we read, with their merchant names and notes encrypted
+  under your key. Amounts, dates and account names are not encrypted under your
+  key. We keep them so they can be matched against receipts you have already
+  entered and not counted twice.</li>
+<li><strong>You will be able to disconnect at any time</strong>, in the app. Disconnecting
+  revokes the token with Plaid, so it can no longer be used to read your bank.
+  The accounts and transactions already read stay with your account until you
+  delete it.</li>
+<li>Plaid has its own privacy policy, at <a href="https://plaid.com/legal">plaid.com/legal</a>.</li>
 </ul>
-<h2>If you use the optional advice feature (a paid feature)</h2>
-<p>Where Tare offers written advice generated by a language model, it sends a</p>
-<p>summary of the figures it is describing — amounts, categories, dates — and never</p>
-<p>your receipt images. This is a paid feature and is not used on the free tier.</p>
+<h2>Written advice and harder receipts (paid features, not available yet)</h2>
+<p>Neither exists in the app today; this says how they will work. Written advice
+from a language model will send our server a summary of the figures it describes
+(amounts, categories, dates) and any question you type about your spending.
+Reading a receipt your device could not will send that receipt's text. Our
+server will pass these to Anthropic, whose model writes the reply. Your receipt
+photographs are never sent. The advice Tare gives today is written on your
+device.</p>
 <h2>What we keep, and for how long</h2>
 <ul>
-<li>Free tier: nothing, because nothing reaches us.</li>
-<li>Paid tier: what is listed above, for as long as you keep the subscription. When</li>
-<p>  you delete your account, we delete it. Deleting all data in the app also erases</p>
-<p>  what is on your device and, through your own iCloud, on your other devices.</p>
-<li>Every privileged action on our servers is written to an append-only audit log,</li>
-<p>  which records that something happened and to which account — not the contents.</p>
+<li>Free tier: nothing, because the app sends us nothing.</li>
+<li>Paid tier: what is listed above, until you delete your account. Ending a
+  subscription does not delete your account or what we hold; Delete Account, in
+  the app, does. It removes everything from our live database at once, after
+  disconnecting any bank. Copies in our database backups remain until those
+  backups expire.</li>
+<li>Delete all data, in Settings, erases your ledger on this device and, if it
+  syncs through your iCloud, on your other devices too. Receipt photographs do
+  not sync, so it removes only the photographs this device kept for the receipts
+  it erased; photographs kept on your other devices are not removed by it.
+  Deleting the Tare app from an iPhone or iPad removes the photographs it kept
+  there. Delete all data does not touch an account on our servers.</li>
+<li>Like any server, ours sees the internet address each request comes from. It
+  uses it only to limit how often it can be called, holding it in memory for a
+  minute at a time and never writing it down; the
+  company that hosts our server may keep it in its own logs. Our own logs note
+  when an account is created, signs in or out, or is deleted, by an account
+  number, never by name.</li>
+<li>Our servers do not keep an audit log yet; this policy will be updated before
+  they do.</li>
 </ul>
 <h2>Children</h2>
-<p>Tare is not directed at children under 13 and we do not knowingly collect their</p>
-<p>information.</p>
+<p>Tare is not directed at children under 13 and we do not knowingly collect their
+information.</p>
 <h2>Your rights</h2>
-<p>Wherever you live, you can ask what we hold, ask for a copy, ask for it to be</p>
-<p>corrected, or ask for it to be deleted. If you never connected a bank, the answer</p>
-<p>to the first question is &quot;nothing&quot;. Export of your own ledger is built into the</p>
-<p>app, as CSV, and needs no request.</p>
+<p>Wherever you live, you can ask what we hold, ask for a copy, ask for it to be
+corrected, or ask for it to be deleted. If you have never signed in to Tare, the answer
+to the first question is "nothing", apart from any feedback you chose to send
+through TestFlight. Export of your own ledger is built into the
+app, as CSV, and needs no request.</p>
 <h2>Changes</h2>
-<p>If this policy changes in a way that affects what happens to your information, the</p>
-<p>date at the top changes and the app will tell you before the change takes effect.</p>
+<p>If this policy changes in a way that affects what happens to your information, the
+date at the top changes and the new version is published here before it takes
+effect. The app downloads no instructions of its own, so a change in what it sends can
+only reach you in an app update.</p>
 <h2>Contact</h2>
-<p>Tareque Rishad — tareque.rishad@gmail.com</p>
+<p>Tareque Rishad — <a href="mailto:tareque.rishad@gmail.com">tareque.rishad@gmail.com</a></p>
 </body>
 </html>
