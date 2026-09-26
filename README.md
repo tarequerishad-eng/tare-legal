@@ -2,7 +2,7 @@
 
 **Last updated: 25 September 2026**
 
-Tare is a personal finance app for iPhone and iPad. This policy says what
+Tare is a personal finance app for iPhone. This policy says what
 happens to your information, in plain words. Where the answer is "nothing leaves
 your device", it says so, because for most of what Tare does that is the truth.
 
@@ -20,8 +20,7 @@ your device", it says so, because for most of what Tare does that is the truth.
 ## What Tare does on your device
 
 Reading receipts, recognising text, categorising a purchase, totalling a month,
-detecting a recurring charge and writing advice all run **on your iPhone, iPad or
-Mac**. None of it involves a network request.
+detecting a recurring charge and writing advice all run **on your iPhone**. None of it involves a network request.
 
 - **Receipt photographs** are read on the device. The photograph you keep with a
   receipt stays on the device you saved it on: Tare does not upload it, and does not
@@ -65,10 +64,9 @@ figures.
 
 ## Your device's backup
 
-Tare's data on your iPhone, iPad or Mac — your ledger and any receipt
-photographs — is part of that device's backup, exactly as every app's data is, if
-you back it up: to iCloud or a computer for an iPhone or iPad, with Time Machine
-for a Mac. Apple encrypts iCloud Backup, but it is
+Tare's data on your iPhone — your ledger and any receipt photographs — is part
+of your phone's backup, exactly as every app's data is, if you back it up to
+iCloud or to a computer. Apple encrypts iCloud Backup, but it is
 **end-to-end encrypted only if you turn on Advanced Data Protection** for your
 Apple account; otherwise Apple holds the keys to it. The end-to-end encryption
 described in the section above applies to Tare's sync database, not to your
@@ -147,7 +145,7 @@ device.
   not sync, so it removes every receipt photograph kept on this device —
   whether or not a transaction still names it — and none kept on your other
   devices; run it on each device whose photographs you want removed.
-  Deleting the Tare app from an iPhone or iPad removes the photographs it kept
+  Deleting the Tare app from an iPhone removes the photographs it kept
   there. Delete all data does not touch an account on our servers.
 - Signing out of iCloud on a device, or turning iCloud off for Tare in the
   device's settings, removes Tare's synced copy of your ledger from that
