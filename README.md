@@ -2,7 +2,7 @@
 
 **Last updated: 25 September 2026**
 
-Tare is a personal finance app for iPhone, iPad and Mac. This policy says what
+Tare is a personal finance app for iPhone and iPad. This policy says what
 happens to your information, in plain words. Where the answer is "nothing leaves
 your device", it says so, because for most of what Tare does that is the truth.
 
@@ -137,12 +137,22 @@ device.
   the app, does. It removes everything from our live database at once, after
   disconnecting any bank. Copies in our database backups remain until those
   backups expire.
+- Deleting a transaction hides it at once, on every device that syncs your
+  ledger, and leaves it out of the CSV export — but it is kept, hidden, on
+  your devices and, if you sync, in your iCloud, until you use Delete all
+  data. Tare does not yet remove hidden transactions on a timer; if that
+  changes, this policy will say so first.
 - Delete all data, in Settings, erases your ledger on this device and, if it
   syncs through your iCloud, on your other devices too. Receipt photographs do
-  not sync, so it removes only the photographs this device kept for the receipts
-  it erased; photographs kept on your other devices are not removed by it.
+  not sync, so it removes every receipt photograph kept on this device —
+  whether or not a transaction still names it — and none kept on your other
+  devices; run it on each device whose photographs you want removed.
   Deleting the Tare app from an iPhone or iPad removes the photographs it kept
   there. Delete all data does not touch an account on our servers.
+- Signing out of iCloud on a device, or turning iCloud off for Tare in the
+  device's settings, removes Tare's synced copy of your ledger from that
+  device, and anything that had not yet reached iCloud goes with it. Export as
+  CSV before you do either if you are not sure everything has synced.
 - Like any server, ours sees the internet address each request comes from. It
   uses it only to limit how often it can be called, holding it in memory for a
   minute at a time and never writing it down; the
@@ -151,6 +161,36 @@ device.
   number, never by name.
 - Our servers do not keep an audit log yet; this policy will be updated before
   they do.
+
+## Diagnostics
+
+Tare can keep a record, on your device, of what the app did: when it locked and
+unlocked, what was saved, deleted or imported, which messages it showed you, how
+it opened your ledger, what iCloud sync reported, and any crash or hang report
+that Apple's MetricKit hands the app about itself. It exists so that, when
+something goes wrong, you can send us a complete account of it instead of
+describing it from memory.
+
+- **It stays on your device.** Tare never sends it anywhere. It leaves the device
+  only when you choose *Export Diagnostics* in Settings and share the file
+  yourself — by AirDrop, Mail, Messages or whatever the share sheet offers.
+  Nothing is sent until you do, and you can look at the file first.
+- **It is on by default in TestFlight test builds and off in App Store builds.**
+  Settings › Diagnostics has the switch either way.
+- **Full detail includes amounts and names.** In *Full* detail the record holds
+  the amounts, merchant names, account names and category names involved in
+  what you did. In *Redacted* detail it holds their currency, sign and length
+  instead. Test builds start in Full detail, because a record of a wrong amount
+  with the amount taken out is no use for fixing it; you can change it.
+- **What it never holds:** the text of a receipt, a receipt photograph, your
+  bank details, your notes, or anything from your photo library beyond the
+  photo's own identifier.
+- *Clear Diagnostics* deletes the record and the crash reports on that device.
+  The record is not part of your device's backup and is kept to about 16 MB,
+  after which the oldest part is discarded.
+
+If you do send us a diagnostics file, we use it to fix the fault it shows and
+delete our copy afterwards, as with TestFlight feedback.
 
 ## Children
 
