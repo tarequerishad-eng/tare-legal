@@ -146,7 +146,8 @@ device.
   whether or not a transaction still names it — and none kept on your other
   devices; run it on each device whose photographs you want removed.
   Deleting the Tare app from an iPhone removes the photographs it kept
-  there. Delete all data does not touch an account on our servers.
+  there. It also clears the diagnostics record (below) kept on this device.
+  Delete all data does not touch an account on our servers.
 - Signing out of iCloud on a device, or turning iCloud off for Tare in the
   device's settings, removes Tare's synced copy of your ledger from that
   device, and anything that had not yet reached iCloud goes with it. Export as
@@ -183,7 +184,8 @@ describing it from memory.
 - **What it never holds:** the text of a receipt, a receipt photograph, your
   bank details, your notes, or anything from your photo library beyond the
   photo's own identifier.
-- *Clear Diagnostics* deletes the record and the crash reports on that device.
+- *Clear Diagnostics* deletes the record and the crash reports on that device,
+  and so does *Delete all data*.
   The record is not part of your device's backup and is kept to about 16 MB,
   after which the oldest part is discarded.
 
