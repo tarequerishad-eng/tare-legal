@@ -1,6 +1,6 @@
 # Tare — Privacy Policy
 
-**Last updated: 25 September 2026**
+**Last updated: 26 October 2026**
 
 Tare is a personal finance app for iPhone. This policy says what
 happens to your information, in plain words. Where the answer is "nothing leaves
@@ -32,6 +32,13 @@ detecting a recurring charge and writing advice all run **on your iPhone**. None
   note of how far through your library it has got. It never keeps anything it
   read from a photo. That list stays on the device: it does not sync, and it is
   left out of the device's backup.
+- **After you import a file**, Tare keeps, on that device, the file's total for
+  each account beside what Tare held for it over the same days, and how the
+  difference is made up, so the account's screen can show it later. It holds
+  figures, dates and Tare's own identifiers — no account name, sheet name or
+  merchant. It does not sync; like everything an app keeps on your device, it
+  is part of that device's backup if you make one. Undoing that import forgets
+  it, and Delete all data removes it.
 - **Card numbers are cut from the text Tare stores.** In the text Tare reads from
   a receipt, and in the comment column of a file you import, any long run of
   digits that could be a card number is cut to its last four before it is saved.
@@ -43,6 +50,31 @@ detecting a recurring charge and writing advice all run **on your iPhone**. None
   receipt as it was photographed, so if the paper shows a full card number, so
   does the picture. Tare does not scan text you type yourself, such as a note
   you write.
+
+## Copies of your ledger on your device
+
+Before a change that reaches all your devices at once and changes many
+transactions together — an import, undoing an import, tidying up duplicate
+categories, or deleting several transactions together or changing their
+category or account — Tare saves a copy of
+your whole ledger on that device first. If it cannot save the copy, it does not make the change.
+
+- **What a copy holds:** every transaction, including ones you have deleted,
+  every account, category and rule, and the text Tare kept from each receipt —
+  the same details as your ledger, with nothing added. It does not hold receipt
+  photographs.
+- **Where it is kept:** in Tare's own storage on that device, never uploaded and
+  never synced. The ten most recent copies are kept and older ones are removed.
+- **Your device's backup includes them**, like the rest of Tare's data (see
+  *Your device's backup*).
+- **Delete all data removes every copy kept on the device you run it on**,
+  along with everything else there. Copies are never synced, so copies on your
+  other devices stay until you run it on each of them, and copies already in a
+  device backup stay in that backup until it is replaced.
+- **Export everything**, in Settings, gives you a fresh copy of your whole
+  ledger together with the receipt photographs kept on that device, as one file
+  you save wherever you choose. Tare sends it nowhere itself. Tare cannot yet
+  read a copy back in; that is still to be built.
 
 ## Sync through your own iCloud
 
@@ -64,7 +96,8 @@ figures.
 
 ## Your device's backup
 
-Tare's data on your iPhone — your ledger and any receipt photographs — is part
+Tare's data on your iPhone — your ledger, the copies of it described above, and
+any receipt photographs — is part
 of your phone's backup, exactly as every app's data is, if you back it up to
 iCloud or to a computer. Apple encrypts iCloud Backup, but it is
 **end-to-end encrypted only if you turn on Advanced Data Protection** for your
@@ -146,7 +179,10 @@ device.
   whether or not a transaction still names it — and none kept on your other
   devices; run it on each device whose photographs you want removed.
   Deleting the Tare app from an iPhone removes the photographs it kept
-  there. It also clears the diagnostics record (below) kept on this device.
+  there. It also removes the copies of your ledger kept on this device (see
+  *Copies of your ledger on your device*) and clears the diagnostics record
+  (below) and the import totals kept on this device. A file you saved with
+  Export everything or Export as CSV is yours and is not touched.
   Delete all data does not touch an account on our servers.
 - Signing out of iCloud on a device, or turning iCloud off for Tare in the
   device's settings, removes Tare's synced copy of your ledger from that
